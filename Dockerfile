@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 WORKDIR /root
 
 COPY update.sh /root/update.sh
-COPY home/* /home/*
+COPY home/ /home/
 RUN su root
 RUN apt-get update 
 RUN apt-get install sudo curl wget unzip tzdata ntpdate -y
