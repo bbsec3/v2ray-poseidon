@@ -1,7 +1,3 @@
 su root
-curl -L -s https://raw.githubusercontent.com/ColetteContreras/v2ray-poseidon/master/install-release.sh | sudo bash
-service v2ray stop
-ntpdate ntp.aliyun.com
-echo -e -n "$V2_CONFIG" > /etc/v2ray/config.json
-service v2ray restart
-service v2ray status
+echo -e -n "$CONFIG_JSON" > /etc/v2ray/config.json
+/usr/bin/v2ray/v2ray -config /etc/v2ray/config.json
